@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sindpd-AP | Sindicato dos Trabalhadores em TI do Amapá</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #004080;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004080;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    @media(max-width: 600px){
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      footer {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sindpd-AP</h1>
+  <p>Sindicato dos Trabalhadores em Tecnologia da Informação do Amapá</p>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <section id="sobre">
+    <h2>Sobre o Sindpd-AP</h2>
+    <p>O Sindpd-AP representa os trabalhadores das empresas de processamento de dados, informática e tecnologia da informação no estado do Amapá. Nossa missão é defender os direitos dos profissionais e promover melhorias nas condições de trabalho.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços oferecidos</h2>
+    <ul>
+      <li>Assessoria jurídica trabalhista</li>
+      <li>Negociação coletiva</li>
+      <li>Treinamentos e capacitações</li>
+      <li>Eventos e palestras</li>
+      <li>Suporte para filiação sindical</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Tem alguma dúvida ou quer se filiar? Entre em contato conosco!</p>
+    <form id="contatoForm">
+      <label for="nome">Nome:</label><br />
+      <input type="text" id="nome" name="nome" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="mensagem">Mensagem:</label><br />
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="resposta" style="color: green; margin-top: 1rem;"></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Sindpd-AP - Todos os direitos reservados
+</footer>
+
+<script>
+  document.getElementById('contatoForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const resposta = document.getElementById('resposta');
+    resposta.textContent = `Obrigado pela mensagem, ${nome}! Entraremos em contato em breve.`;
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
